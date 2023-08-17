@@ -3,12 +3,12 @@
 case "$1" in
   start)
       scull_load
-      misc_load
+      module_load faulty
       modprobe hello
 	;;
   stop)
       rmprobe hello
-      misc_unload
+      module_unload faulty
       scull_unload
 	;;
   *)
